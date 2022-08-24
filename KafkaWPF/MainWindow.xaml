@@ -1,0 +1,33 @@
+﻿<Window x:Class="KafkaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KafkaWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" 
+        ResizeMode="NoResize" IsTabStop="False">
+    <Grid>
+        <TextBox x:Name="producetxt" Margin="58,0,372,355" Height="23" VerticalAlignment="Bottom" Focusable="False">
+            Produced messages
+        </TextBox>
+        <TextBox  x:Name="consumetxt" Margin="80,0,80,0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Focusable="False" Height="207" VerticalAlignment="Center">
+
+        </TextBox>
+
+        <Button x:Name="Producebtn" Margin="447,0,214,355" Click="Produce_Click" Height="23" VerticalAlignment="Bottom">
+            Produce
+        </Button>
+        <Button x:Name="Consumebtn" Margin="581,0,80,64" Content="Consume" Click="Consume_Click" Height="38" VerticalAlignment="Bottom"></Button>
+        <Label Content="Current Topic:" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom" Width="94" Margin="59,0,0,10" Grid.IsSharedSizeScope="True"/>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="153,0,532,9" Height="26" VerticalAlignment="Bottom">
+
+            <TextBlock x:Name="topicName" Height="18" Margin="9,4,9,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        </Border>
+        <Label Content="Click Produce to send mock data to topic" HorizontalAlignment="Left" Height="30" VerticalAlignment="Bottom" Width="256" Margin="74,0,0,383"/>
+        <Label Content="Consumer" HorizontalAlignment="Left" Width="88" Margin="80,0,0,324" Height="23" VerticalAlignment="Bottom"/>
+        <Label Content="Consume data from current topic" HorizontalAlignment="Left" Height="29" VerticalAlignment="Bottom" Width="192" Margin="380,0,0,69"/>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="57,0,65,50" Height="297" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Window>
